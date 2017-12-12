@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import pkgApp.RetirementApp;
+import pkgCore.Retirement;
 
 public class RetirementController implements Initializable {
 
@@ -35,12 +36,16 @@ public class RetirementController implements Initializable {
 		System.out.println("Clear pressed");
 		
 		//	TODO: Clear all the text inputs
+		ActionEvent.setText("");
 	}
 	
 	@FXML
 	public void btnCalculate(ActionEvent event) {
 		
 		//	TODO: Call AmountToSave and TotalAmountSaved and populate 
+		Retirement cls= new Retirement();
+		cls.AmountToSave();
+		cls.TotalAmountSaved();
 		
 	}
 	
